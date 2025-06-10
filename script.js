@@ -32,6 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initCounterAnimations();
     initAccessibility();
     initTestimonialSlider();
+    initVideoThumbnails();
     
     // Portfolio carousel disabled - showing all videos in static grid
     
@@ -681,6 +682,97 @@ document.addEventListener('DOMContentLoaded', function() {
     `;
     
     document.head.appendChild(style);
+    
+    // Enhanced video thumbnail functionality
+    function initVideoThumbnails() {
+        const videoThumbnails = document.querySelectorAll('.video-thumbnail');
+        
+        videoThumbnails.forEach(thumbnail => {
+            // Remove any existing onclick and add enhanced click handler
+            thumbnail.removeAttribute('onclick');
+            
+            thumbnail.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                
+                console.log('Video thumbnail clicked');
+                
+                // Get YouTube URL from onclick or data attribute
+                const onclickAttr = this.getAttribute('onclick');
+                let youtubeUrl = '';
+                
+                if (onclickAttr) {
+                    const match = onclickAttr.match(/window\.open\('([^']+)'/);
+                    if (match) {
+                        youtubeUrl = match[1];
+                    }
+                }
+                
+                // Alternative: Check if URL is in a data attribute
+                if (!youtubeUrl) {
+                    youtubeUrl = this.getAttribute('data-youtube-url');
+                }
+                
+                // Extract video ID and try alternative approaches
+                if (youtubeUrl) {
+                    console.log('Opening YouTube URL:', youtubeUrl);
+                    
+                    // Try multiple methods to open the video
+                    try {
+                        // Method 1: Direct window.open
+                        const newWindow = window.open(youtubeUrl, '_blank', 'noopener,noreferrer');
+                        
+                        // Method 2: If popup blocked, try location assignment
+                        if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
+                            console.log('Popup blocked, trying alternative method');
+                            
+                            // Create temporary anchor element
+                            const tempLink = document.createElement('a');
+                            tempLink.href = youtubeUrl;
+                            tempLink.target = '_blank';
+                            tempLink.rel = 'noopener noreferrer';
+                            
+                            // Simulate click on anchor
+                            document.body.appendChild(tempLink);
+                            tempLink.click();
+                            document.body.removeChild(tempLink);
+                        }
+                        
+                    } catch (error) {
+                        console.error('Error opening YouTube video:', error);
+                        
+                        // Fallback: Show alert with URL
+                        alert(`נא לפתוח את הסרטון בכתובת: ${youtubeUrl}`);
+                    }
+                }
+                
+                // Add visual feedback
+                this.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    this.style.transform = 'scale(1)';
+                }, 150);
+            });
+            
+            // Add hover effects
+            thumbnail.addEventListener('mouseenter', function() {
+                const playButton = this.querySelector('.play-button');
+                if (playButton) {
+                    playButton.style.transform = 'translate(-50%, -50%) scale(1.1)';
+                    playButton.style.backgroundColor = 'rgba(255, 107, 53, 1)';
+                }
+            });
+            
+            thumbnail.addEventListener('mouseleave', function() {
+                const playButton = this.querySelector('.play-button');
+                if (playButton) {
+                    playButton.style.transform = 'translate(-50%, -50%) scale(1)';
+                    playButton.style.backgroundColor = 'rgba(255, 107, 53, 0.9)';
+                }
+            });
+        });
+        
+        console.log('Video thumbnails initialized:', videoThumbnails.length);
+    }
 });
 
 // Performance optimization
