@@ -2170,6 +2170,7 @@ body {
 @media (max-width: 1024px) {
     .hero-content-premium {
         min-height: 70vh;
+        padding-top: 120px;
     }
     
     .hero-text-section-full {
@@ -2235,6 +2236,10 @@ body {
     .logo-sub {
         font-size: 0.6rem;
         letter-spacing: 1.5px;
+    }
+    
+    .hero-content-premium {
+        padding-top: 140px;
     }
     
     .hero-text-section-full {
@@ -2445,5 +2450,16 @@ body {
         font-size: 30px;
         width: 40px;
         height: 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content-premium {
+        padding-top: 150px;
+    }
+    
+    .hero-text-section-full {
+        padding: 1.5rem 1rem;
+        margin-top: 1rem;
     }
 } 
