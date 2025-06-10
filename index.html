@@ -779,5 +779,87 @@
             once: true
         });
     </script>
+    
+    <!-- Video Click Handler Script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('Video click handler loading...');
+        
+        // Wait a bit for all elements to load
+        setTimeout(function() {
+            const videoThumbnails = document.querySelectorAll('.video-thumbnail');
+            console.log('Found video thumbnails:', videoThumbnails.length);
+            
+            videoThumbnails.forEach((thumbnail, index) => {
+                console.log('Setting up thumbnail', index);
+                
+                // Remove any existing onclick
+                thumbnail.removeAttribute('onclick');
+                
+                // Get the YouTube URL
+                const youtubeUrl = thumbnail.getAttribute('data-youtube-url');
+                console.log('YouTube URL for thumbnail', index, ':', youtubeUrl);
+                
+                if (youtubeUrl) {
+                    // Add click event
+                    thumbnail.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        e.stopPropagation();
+                        
+                        console.log('Clicked on video thumbnail', index, 'URL:', youtubeUrl);
+                        
+                        // Try to open the video
+                        try {
+                            const newWindow = window.open(youtubeUrl, '_blank', 'noopener,noreferrer,width=1280,height=720');
+                            
+                            if (!newWindow) {
+                                console.log('Window.open failed, trying alternative method');
+                                // Create and click a temporary link
+                                const link = document.createElement('a');
+                                link.href = youtubeUrl;
+                                link.target = '_blank';
+                                link.rel = 'noopener noreferrer';
+                                
+                                // Add to DOM temporarily
+                                document.body.appendChild(link);
+                                link.click();
+                                document.body.removeChild(link);
+                            } else {
+                                console.log('Window opened successfully');
+                            }
+                        } catch (error) {
+                            console.error('Error opening video:', error);
+                            // Last resort - show the URL
+                            alert('נא לפתוח את הקישור: ' + youtubeUrl);
+                        }
+                        
+                        // Visual feedback
+                        this.style.transform = 'scale(0.95)';
+                        setTimeout(() => {
+                            this.style.transform = 'scale(1)';
+                        }, 200);
+                    });
+                    
+                    // Add hover effect
+                    thumbnail.addEventListener('mouseenter', function() {
+                        const playBtn = this.querySelector('.play-button');
+                        if (playBtn) {
+                            playBtn.style.transform = 'translate(-50%, -50%) scale(1.15)';
+                        }
+                    });
+                    
+                    thumbnail.addEventListener('mouseleave', function() {
+                        const playBtn = this.querySelector('.play-button');
+                        if (playBtn) {
+                            playBtn.style.transform = 'translate(-50%, -50%) scale(1)';
+                        }
+                    });
+                }
+            });
+            
+            console.log('Video thumbnails setup complete');
+        }, 1000);
+    });
+    </script>
 </body>
 </html> 

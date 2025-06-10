@@ -954,6 +954,7 @@ body {
     overflow: hidden;
     cursor: pointer;
     transition: var(--transition);
+    z-index: 1;
 }
 
 .video-thumbnail:hover {
