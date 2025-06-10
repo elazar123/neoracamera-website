@@ -163,7 +163,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 תודה!`;
                 
-                const whatsappUrl = `https://wa.me/972505052951?text=${encodeURIComponent(whatsappMessage)}`;
+                const whatsappUrl = `https://wa.me/972525624350?text=${encodeURIComponent(whatsappMessage)}`;
                 window.open(whatsappUrl, '_blank');
                 
                 // Reset form

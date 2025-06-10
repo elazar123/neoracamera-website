@@ -108,7 +108,7 @@ neoracamera/
 
 ## 📞 יצירת קשר
 
-- **טלפון**: 050-505-2951
+- **טלפון**: 052-562-4350
 - **אימייל**: elazar12321@gmail.com
 - **אתר**: nehoralive.com
 - **אינסטגרם**: @elazar_riger
