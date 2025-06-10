@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>אלעזר ריגר - ימי צילום לעסקים</title>
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="סטודיו נהורא - ימי צילום מקצועיים לעסקים. יום צילום אחד שיביא לכם תוכן איכותי לכל השנה. חבילות מותאמות אישית מ-₪1,500.">
+    <meta name="keywords" content="צילום עסקי, ימי צילום, וידאו מרקטינג, תוכן דיגיטלי, צילום מקצועי, עריכת וידאו">
+    <meta name="author" content="אלעזר ריגר - נהורא סטודיו">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="נהורא - ימי צילום מקצועיים לעסקים">
+    <meta property="og:description" content="יום צילום אחד שיביא לכם תוכן איכותי לכל השנה. חבילות מותאמות אישית החל מ-₪1,500. צילום מקצועי + עריכה + אסטרטגיה שיווקית.">
+    <meta property="og:image" content="io-photo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://neoracamera.vercel.app">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="נהורא סטודיו">
+    <meta property="og:locale" content="he_IL">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="נהורא - ימי צילום מקצועיים לעסקים">
+    <meta name="twitter:description" content="יום צילום אחד שיביא לכם תוכן איכותי לכל השנה. חבילות מותאמות אישית החל מ-₪1,500.">
+    <meta name="twitter:image" content="io-photo.png">
+    <meta name="twitter:creator" content="@elazar_riger">
+    
+    <!-- Additional Meta Tags -->
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Hebrew">
+    <meta name="revisit-after" content="7 days">
+    <link rel="canonical" href="https://neoracamera.vercel.app">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="whatsapp-preview.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="whatsapp-preview.png">
+    <link rel="apple-touch-icon" href="whatsapp-preview.png">
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation">
+        <div class="floating-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="modern-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-section">
+                    <img src="whatsapp-preview.png" alt="לוגו" class="header-logo">
+                </div>
+                <nav class="main-nav">
+                    <a href="#home" class="nav-link">בית</a>
+                    <a href="#services" class="nav-link">שירותים</a>
+                    <a href="#portfolio" class="nav-link">עבודות</a>
+                    <a href="#packages" class="nav-link">חבילות</a>
+                    <a href="#contact" class="nav-link">צור קשר</a>
+                </nav>
+                <a href="https://wa.me/972505052951?text=הי%20אלעזר%20אשמח%20לדבר%20איתך%20על%20יום%20צילום" target="_blank" class="header-cta">קבע שיחה</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-premium">
+        <div class="hero-bg-video">
+            <div class="video-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content-premium">
+                <div class="hero-text-section-full">
+                    <h2 class="hero-subtitle-premium">יום צילום שיווקי</h2>
+                    <h1 class="hero-title-premium">
+                        צילום 
+                        <span class="gradient-text typewriter" id="dynamicText">שבונה מותג</span>
+                        לעסק שלך
+                    </h1>
+                    <h3 class="hero-description-subtitle">ביום אחד אתה נראה כמו מותג גלובלי</h3>
+                    <p class="hero-description">אנחנו מצלמים עורכים ומגישים לך חבילות סרטונים מדוייקים לרשתות - בלי כאבי ראש ובלי בלאגן הכל מוכן לפרסום מיידי</p>
+                    
+                    <div class="hero-buttons">
+                        <button class="btn-primary-premium" onclick="scrollToContact()">
+                            <span>דבר איתנו</span>
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                        <button class="btn-secondary-premium" onclick="scrollToPortfolio()">
+                            <i class="fas fa-play"></i>
+                            <span>צפה בעבודות</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator" onclick="scrollToServices()">
+            <div class="scroll-text">גלול למטה</div>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Showcase -->
+    <section id="services" class="services-premium">
+        <div class="container">
+            <div class="section-header-premium">
+                <h2 class="section-title-premium"><span class="gradient-text">לא סתם מצלמים</span></h2>
+                <p class="section-desc-premium">יוצרים עבורך נוכחות שיווקית שמביאה לקוחות</p>
+            </div>
+
+            <div class="services-grid-premium">
+                <div class="service-card-premium" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-icon-premium">
+                        <div class="icon-bg gradient-1"></div>
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>פגישת הכנה אסטרטגית</h3>
+                    <p>לא מצלמים לפני שמבינים מה המסר שלך</p>
+                    <div class="service-features">
+                        <div class="feature"><i class="fas fa-check"></i> מיקוד קהלי יעד</div>
+                        <div class="feature"><i class="fas fa-check"></i> תכנון תוכן לפי ערוצי הפצה</div>
+                        <div class="feature"><i class="fas fa-check"></i> בניית סדרת מסרים מדויקת</div>
+                        <div class="feature"><i class="fas fa-check"></i> תיאום תוצאה – איך ייראה כל סרטון</div>
+                    </div>
+                </div>
+
+                <div class="service-card-premium" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-icon-premium">
+                        <div class="icon-bg gradient-2"></div>
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>יום צילום מקצועי</h3>
+                    <p>ציוד מתקדם, אווירה נעימה, ותוצאה מושלמת</p>
+                    <div class="service-features">
+                        <div class="feature"><i class="fas fa-check"></i> צילום באיכות 4K מרהיבה</div>
+                        <div class="feature"><i class="fas fa-check"></i> תאורה שמחמיאה לפנים ולמוצר</div>
+                        <div class="feature"><i class="fas fa-check"></i> הנחייה רגועה מול מצלמה</div>
+                        <div class="feature"><i class="fas fa-check"></i> חוויה מקצועית אבל קלילה</div>
+                    </div>
+                </div>
+
+                <div class="service-card-premium" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon-premium">
+                        <div class="icon-bg gradient-3"></div>
+                        <i class="fas fa-cut"></i>
+                    </div>
+                    <h3>עריכה וסיפור סינמטי</h3>
+                    <p>עריכה שמרגישה הוליווד, ומדברת את הלב של הקהל שלך</p>
+                    <div class="service-features">
+                        <div class="feature"><i class="fas fa-check"></i> עריכה סיפורית עם קצב נכון</div>
+                        <div class="feature"><i class="fas fa-check"></i> שילוב אפקטים עדינים וטיפוגרפיה חכמה</div>
+                        <div class="feature"><i class="fas fa-check"></i> התאמת צבעים למיתוג שלך</div>
+                        <div class="feature"><i class="fas fa-check"></i> גרסת וידאו מותאמת לרשתות</div>
+                    </div>
+                </div>
+
+                <div class="service-card-premium" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon-premium">
+                        <div class="icon-bg gradient-4"></div>
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>פרסום ואופטימיזציה</h3>
+                    <p>אתה לא מקבל קבצים – אתה מקבל נוכחות</p>
+                    <div class="service-features">
+                        <div class="feature"><i class="fas fa-check"></i> גרסאות לפייסבוק, אינסטגרם, רילס, יוטיוב</div>
+                        <div class="feature"><i class="fas fa-check"></i> ניסוחים לפוסטים ומעטפת ויזואלית</div>
+                        <div class="feature"><i class="fas fa-check"></i> עזרה בניהול קהילה/קבוצת וואטספ</div>
+                        <div class="feature"><i class="fas fa-check"></i> חיבורים לפלטפורמות פרסום חיצוניות</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Portfolio -->
+    <section id="portfolio" class="portfolio-premium">
+        <div class="container">
+            <div class="section-header-premium">
+                <h2 class="section-title-premium">ככה יראו <span class="gradient-text">הסרטונים שלך</span></h2>
+            </div>
+
+            <div class="portfolio-carousel">
+                <div class="portfolio-grid-premium" id="portfolioGrid">
+                    <div class="portfolio-item-premium" data-category="business">
+                        <div class="portfolio-image">
+                            <iframe src="https://www.youtube.com/embed/0mJoivzwTzQ" 
+                                    frameborder="0" 
+                                    allowfullscreen
+                                    class="youtube-embed">
+                            </iframe>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3>סרטון תדמית עסקי</h3>
+                                    <p>פרויקט מקצועי עם תוצאות מרשימות</p>
+                                    <div class="portfolio-tags">
+                                        <span class="tag">תדמית</span>
+                                        <span class="tag">עסקי</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item-premium" data-category="business">
+                        <div class="portfolio-image">
+                            <iframe src="https://www.youtube.com/embed/YAlpyB7PwWk" 
+                                    frameborder="0" 
+                                    allowfullscreen
+                                    class="youtube-embed">
+                            </iframe>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3>קמפיין שיווקי דיגיטלי</h3>
+                                    <p>תוכן ויראלי עם מיליוני צפיות</p>
+                                    <div class="portfolio-tags">
+                                        <span class="tag">שיווק</span>
+                                        <span class="tag">ויראלי</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item-premium" data-category="personal">
+                        <div class="portfolio-image">
+                            <iframe src="https://www.youtube.com/embed/r7b00dM7fCc" 
+                                    frameborder="0" 
+                                    allowfullscreen
+                                    class="youtube-embed">
+                            </iframe>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3>תוכן אישי וייחודי</h3>
+                                    <p>סיפור אישי שמחבר לקהל</p>
+                                    <div class="portfolio-tags">
+                                        <span class="tag">אישי</span>
+                                        <span class="tag">סיפור</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item-premium" data-category="creative">
+                        <div class="portfolio-image">
+                            <iframe src="https://www.youtube.com/embed/XAff3kV13VA" 
+                                    frameborder="0" 
+                                    allowfullscreen
+                                    class="youtube-embed">
+                            </iframe>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3>פרויקט יצירתי מיוחד</h3>
+                                    <p>עבודה חדשנית עם גישה ייחודית</p>
+                                    <div class="portfolio-tags">
+                                        <span class="tag">יצירתי</span>
+                                        <span class="tag">חדשני</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item-premium" data-category="business">
+                        <div class="portfolio-image">
+                            <iframe src="https://www.youtube.com/embed/TEpWZwqTNtw" 
+                                    frameborder="0" 
+                                    allowfullscreen
+                                    class="youtube-embed">
+                            </iframe>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3>סדרת רילס מקצועית</h3>
+                                    <p>תוכן מותאם לרשתות חברתיות</p>
+                                    <div class="portfolio-tags">
+                                        <span class="tag">רילס</span>
+                                        <span class="tag">רשתות</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="portfolio-item-premium" data-category="personal">
+                        <div class="portfolio-image">
+                            <iframe src="https://www.youtube.com/embed/q1qrpLm0FyY" 
+                                    frameborder="0" 
+                                    allowfullscreen
+                                    class="youtube-embed">
+                            </iframe>
+                            <div class="portfolio-overlay">
+                                <div class="portfolio-content">
+                                    <h3>תוכן לקהל מקצועי</h3>
+                                    <p>סרטון מעמיק עם תוצאות מדידות</p>
+                                    <div class="portfolio-tags">
+                                        <span class="tag">מקצועי</span>
+                                        <span class="tag">תוצאות</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                                </div>
+
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Packages -->
+    <section id="packages" class="packages-ultra-premium">
+        <div class="container">
+            <div class="section-header-premium">
+                <h2 class="section-title-premium"><strong>החבילות <span class="gradient-text">שלנו</span></strong></h2>
+                <p class="section-desc-premium">4 רמות של שירות - מהתחלתי למקצועי ביותר, בחר מה שמתאים לך</p>
+            </div>
+
+            <div class="packages-grid-ultra">
+                <!-- נהורא בשבילך Package -->
+                <div class="package-ultra starter">
+                    <div class="package-header-ultra">
+                        <div class="package-icon-ultra">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <h3>בשבילך</h3>
+                        <p class="package-subtitle">שולחים תוכן – מקבלים סרטונים ערוכים</p>
+                    </div>
+                    <div class="package-features-ultra">
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>עריכת 10 סרטונים קצרים (רילס, טיקטוק, שורטס)</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>אפשרות לשלוח וידאו מצולם מראש או הרצאה מוקלטת</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>חיתוך חכם של קטעים מעניינים</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>הוספת טקסט, פתיח, סגיר ומיתוג בסיסי</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>מותאם לפלטפורמות החברתיות</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>החזר תוך 7 ימי עסקים</span>
+                        </div>
+                        <div class="feature-ultra package-note">
+                            <i class="fas fa-info-circle"></i>
+                            <span>למי שכבר מצלם בעצמו – ורוצה תוצאה שמרגישה מקצועית</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/972505052951?text=הי%20שלום%20וברכה%20אלעזר%20אשמח%20לקבל%20ממך%20את%20החבילה%20בשבילך%20מתי%20אפשר%20לדבר%20בנושא?" target="_blank" class="package-btn-ultra">
+                        <span>בוא נתחיל לעבוד</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- נהוראקאסט Package -->
+                <div class="package-ultra pro">
+                    <div class="package-header-ultra">
+                        <div class="package-icon-ultra">
+                            <i class="fas fa-video"></i>
+                        </div>
+                        <h3>יום צילום מקצועי</h3>
+                        <p class="package-subtitle">אתה מגיע – יוצאים עם תוכן</p>
+                    </div>
+                    <div class="package-features-ultra">
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>יום צילום באולפן או בלוקיישן מסוכם</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>צילום וידאו מקצועי ל-10 סרטונים</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>תאורה וסאונד באיכות גבוהה</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>עריכה מלאה לכל הסרטונים</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>הוספת פתיח וסגיר מיתוגי</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>3 תמונות תדמית כלולות</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>שיחה מקדימה לתיאום מסרים</span>
+                        </div>
+                        <div class="feature-ultra package-note">
+                            <i class="fas fa-info-circle"></i>
+                            <span>מושלם לעסקים שרוצים לצאת לדרך עם נראות סופר-מקצועית</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/972505052951?text=הי%20שלום%20וברכה%20אלעזר%20אשמח%20לקבל%20ממך%20את%20החבילה%20יום%20צילום%20מקצועי%20מתי%20אפשר%20לדבר%20בנושא?" target="_blank" class="package-btn-ultra">
+                        <span>בוא נתחיל לעבוד</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- 4x4 Package -->
+                <div class="package-ultra premium popular">
+                    <div class="popular-badge">לקוחות ממליצים</div>
+                    <div class="package-header-ultra">
+                        <div class="package-icon-ultra">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>4×4 – נוכחות שלמה ברשת</h3>
+                        <p class="package-subtitle">קמפיין תוכן חודשי בעוצמה</p>
+                    </div>
+                    <div class="package-features-ultra">
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>20 סרטונים מקצועיים ביום צילום</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>עריכה + כתיבה לפוסטים + עיצוב כיתוביות</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>10 תמונות תדמית</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>פתיחת קהילת וואטסאפ להפצה</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>ליווי אסטרטגי לשיווק הסרטונים</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>ייעוץ בתזמון, הפצה וניהול קהל</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>הנפשת לוגו מקצועית</span>
+                        </div>
+                        <div class="feature-ultra package-note">
+                            <i class="fas fa-info-circle"></i>
+                            <span>מתאים למי שלא רק מעלה סרטונים – אתה בונה קהל</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/972505052951?text=הי%20שלום%20וברכה%20אלעזר%20אשמח%20לקבל%20ממך%20את%20החבילה%204×4%20נוכחות%20שלמה%20ברשת%20מתי%20אפשר%20לדבר%20בנושא?" target="_blank" class="package-btn-ultra">
+                        <span>בוא נתחיל לעבוד</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <!-- סטודיו Package -->
+                <div class="package-ultra enterprise">
+                    <div class="package-header-ultra">
+                        <div class="package-icon-ultra">
+                            <i class="fas fa-crown"></i>
+                        </div>
+                        <h3>סטודיו – כל התמונה העסקית</h3>
+                        <p class="package-subtitle">הפקה כוללת – תוכן, וידאו, הפצה</p>
+                    </div>
+                    <div class="package-features-ultra">
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>35 סרטונים ב-2 ימי צילום מתוזמנים</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>צילומי תדמית וסושיאל מקצועיים</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>פתיחת פודקאסט / ערוץ יוטיוב</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>כתיבה, צילום, עריכה + מיתוג ויזואלי</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>עריכת תוכן המדיה השוטף לקהילה</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>חבילת VIP של ליווי אסטרטגי מלא לשיווק ברשת</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>תוכנית חודשית מובנית לנוכחות דיגיטלית</span>
+                        </div>
+                        <div class="feature-ultra">
+                            <i class="fas fa-check-circle"></i>
+                            <span>מענה שוטף בצ'אט למעקב ובקרה</span>
+                        </div>
+                        <div class="feature-ultra package-note">
+                            <i class="fas fa-info-circle"></i>
+                            <span>פתרון 360° שמוריד ממך את כל כאב הראש ומחזיק לך את התוכן באוויר באופן שוטף ומלא</span>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/972505052951?text=הי%20שלום%20וברכה%20אלעזר%20אשמח%20לקבל%20ממך%20את%20החבילה%20סטודיו%20כל%20התמונה%20העסקית%20מתי%20אפשר%20לדבר%20בנושא?" target="_blank" class="package-btn-ultra">
+                        <span>בוא נתחיל לעבוד</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials-premium">
+        <div class="container">
+            <div class="section-header-premium">
+                <h2 class="section-title-premium">מה אומרים <span class="gradient-text">עלינו</span></h2>
+            </div>
+
+            <div class="testimonials-slider">
+                <div class="testimonial-card-premium active" data-testimonial="0">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"עבדנו עם אלעזר על פרויקט עריכת סרטונים לעסק שלנו. האיכות המקצועית והמהירות ברמה גבוהה מאוד. קיבלנו תוצאה שעלתה על הציפיות והסרטונים הגיעו בדיוק בזמן שהוסכם."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <div class="author-placeholder">ר</div>
+                        </div>
+                        <div class="author-info">
+                            <h4>רחל כהן</h4>
+                            <p>מנהלת שיווק</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card-premium" data-testimonial="1">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"יום צילום מדהים! אלעזר הצליח להוציא מאיתנו את הטוב ביותר מול המצלמה. היה מקצועי, סבלני ויצירתי. התוצאה הסופית הייתה מעבר למה שדמיינו - סרטונים איכותיים שבאמת מייצגים את המותג שלנו."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <div class="author-placeholder">י</div>
+                        </div>
+                        <div class="author-info">
+                            <h4>יונתן לוי</h4>
+                            <p>בעל עסק</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card-premium" data-testimonial="2">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"השירות היה אמין, מקצועי ומסודר מתחילת הפרויקט ועד הסוף. אלעזר הקפיד על כל פרט קטן והתוצאה באיכות גבוהה. בהחלט נשוב לעבוד איתו שוב בפרויקטים הבאים."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <div class="author-placeholder">ד</div>
+                        </div>
+                        <div class="author-info">
+                            <h4>דן אברהם</h4>
+                            <p>יועץ עסקי</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card-premium" data-testimonial="3">
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="testimonial-text">"בהתחלה היינו מודאגים מיום הצילום, אבל אלעזר הפך את החוויה לנעימה ומקצועית. הוא נתן לנו ביטחון מול המצלמה והתוצאה הסופית הייתה מושלמת. שירות כולל עם תשומת לב לכל הפרטים."</p>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <div class="author-placeholder">מ</div>
+                        </div>
+                        <div class="author-info">
+                            <h4>מיכל רוזן</h4>
+                            <p>יזמת דיגיטלית</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Navigation dots -->
+                <div class="testimonial-dots">
+                    <button class="dot active" data-slide="0"></button>
+                    <button class="dot" data-slide="1"></button>
+                    <button class="dot" data-slide="2"></button>
+                    <button class="dot" data-slide="3"></button>
+                </div>
+
+                <!-- Navigation arrows -->
+                <button class="testimonial-nav prev" onclick="changeTestimonial(-1)">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+                <button class="testimonial-nav next" onclick="changeTestimonial(1)">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Premium -->
+    <section id="contact" class="contact-premium">
+        <div class="container">
+            <div class="contact-content-premium">
+                <div class="contact-text">
+                    <h2 class="section-title-premium"><strong>צור <span class="gradient-text">קשר</span></strong></h2>
+                    <p class="section-desc-premium">בוא נדבר על איך אני יכול לעזור לך ליצור תוכן שיביא לקוחות</p>
+                    
+                    <div class="contact-features">
+                        <div class="contact-feature">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <h4>שיחת ייעוץ של עשרים דק׳ חינם</h4>
+                                <p>ייעוץ מקצועי ללא עלות</p>
+                            </div>
+                        </div>
+                        <div class="contact-feature">
+                            <i class="fas fa-rocket"></i>
+                            <div>
+                                <h4>תחילת עבודה משותפת במהירות</h4>
+                                <p>נתחיל לעבוד יחד במהירות</p>
+                            </div>
+                        </div>
+                        <div class="contact-feature">
+                            <i class="fas fa-user-check"></i>
+                            <div>
+                                <h4>ליווי אישי ומקיף</h4>
+                                <p>תמיכה מלאה לאורך כל הדרך</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-premium">
+                    <form id="contactForm" class="form-premium">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label>שם מלא</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label>טלפון</label>
+                                <input type="tel" id="phone" name="phone" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>תחום העסק</label>
+                            <input type="text" id="business" name="business" required>
+                        </div>
+                        <div class="form-group">
+                            <label>סוג חבילה</label>
+                            <select name="package" required>
+                                <option value="">בחר חבילה</option>
+                                <option value="בשבילך">בשבילך</option>
+                                <option value="יום צילום מקצועי">יום צילום מקצועי</option>
+                                <option value="4×4 נוכחות שלמה ברשת">4×4 נוכחות שלמה ברשת</option>
+                                <option value="סטודיו כל התמונה העסקית">סטודיו כל התמונה העסקית</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>ספר לי על הפרויקט</label>
+                            <textarea name="message" rows="4" placeholder="מה המטרה? איזה סוג תוכן? מתי תרצה להתחיל?"></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn-premium">
+                            <span>שלח בקשה</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Premium -->
+    <footer class="footer-premium">
+        <div class="container">
+            <div class="footer-content-premium">
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>ניווט באתר</h4>
+                        <a href="#home">בית</a>
+                        <a href="#services">שירותים</a>
+                        <a href="#portfolio">עבודות</a>
+                        <a href="#packages">חבילות</a>
+                        <a href="#contact">צור קשר</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>חבילות</h4>
+                        <a href="https://wa.me/972505052951?text=הי%20שלום%20וברכה%20אלעזר%20אשמח%20לקבל%20ממך%20את%20החבילה%20בשבילך%20מתי%20אפשר%20לדבר%20בנושא?" target="_blank">בשבילך</a>
+                        <a href="https://wa.me/972505052951?text=הי%20שלום%20וברכה%20אלעזר%20אשמח%20לקבל%20ממך%20את%20החבילה%20יום%20צילום%20מקצועי%20מתי%20אפשר%20לדבר%20בנושא?" target="_blank">יום צילום מקצועי</a>
+                        <a href="https://wa.me/972505052951?text=הי%20שלום%20וברכה%20אלעזר%20אשמח%20לקבל%20ממך%20את%20החבילה%204×4%20נוכחות%20שלמה%20ברשת%20מתי%20אפשר%20לדבר%20בנושא?" target="_blank">4×4</a>
+                        <a href="https://wa.me/972505052951?text=הי%20שלום%20וברכה%20אלעזר%20אשמח%20לקבל%20ממך%20את%20החבילה%20סטודיו%20כל%20התמונה%20העסקית%20מתי%20אפשר%20לדבר%20בנושא?" target="_blank">סטודיו</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>צור קשר</h4>
+                        <a href="mailto:elazar12321@gmail.com"><i class="fas fa-envelope"></i> elazar12321@gmail.com</a>
+                        <a href="tel:+972505052951"><i class="fas fa-phone"></i> 050-505-2951</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>עקבו אחרינו</h4>
+                        <a href="https://nehoralive.com/" target="_blank"><i class="fas fa-globe"></i> אתר נהורא</a>
+                        <a href="https://www.youtube.com/@%D7%A0%D7%94%D7%95%D7%A8%D7%90%D7%A9%D7%99%D7%93%D7%95%D7%A8%D7%99%D7%9D%D7%97%D7%99%D7%99%D7%9D-%D7%989%D7%9E" target="_blank"><i class="fab fa-youtube"></i> יוטיוב</a>
+                        <a href="https://www.instagram.com/elazar_riger/" target="_blank"><i class="fab fa-instagram"></i> אינסטגרם</a>
+                        <a href="https://www.facebook.com/p/%D7%A0%D7%94%D7%95%D7%A8%D7%90-%D7%A9%D7%99%D7%93%D7%95%D7%A8%D7%99%D7%9D-%D7%97%D7%99%D7%99%D7%9D-100092755722103/" target="_blank"><i class="fab fa-facebook"></i> פייסבוק</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 האתר נבנה על ידי נהורא סטודיו</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Accessibility Button -->
+    <button id="accessibilityBtn" class="accessibility-btn-premium" aria-label="נגישות">
+        <i class="fas fa-universal-access"></i>
+    </button>
+
+
+
+    <!-- WhatsApp Float -->
+    <a href="https://wa.me/972505052951?text=הי%20אלעזר%20אשמח%20לדבר%20איתך%20לגבי%20יום%20צילום%20לעסק%20שלי" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+        <span>שלח הודעה</span>
+    </a>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+</body>
+</html> 
