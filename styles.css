@@ -375,23 +375,11 @@ body {
 }
 
 .hero-subtitle-premium {
-    font-size: 1.2rem;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.8);
-    margin-bottom: 1rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    animation: fadeInUp 0.8s ease-out 0.2s both;
-    text-align: center;
-}
-
-.hero-description-subtitle {
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 2rem;
-    line-height: 1.4;
-    animation: fadeInUp 0.8s ease-out 0.6s both;
+    font-size: 1.75rem;
+    font-weight: 600;
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 0.8s ease-out 0.4s both;
     text-align: center;
 }
 
@@ -940,16 +928,13 @@ body {
     margin: 0;
     background: #000;
     flex-shrink: 0;
-    pointer-events: auto;
 }
 
 .youtube-embed {
     width: 100%;
     height: 100%;
-    border: none;
+    object-fit: cover;
     border-radius: 15px;
-    pointer-events: auto;
-    cursor: pointer;
 }
 
 .portfolio-overlay {
@@ -970,7 +955,6 @@ body {
     opacity: 0;
     transition: opacity 0.3s ease;
     border-radius: 15px;
-    pointer-events: none;
 }
 
 .portfolio-item-premium:hover .portfolio-overlay {
@@ -2001,216 +1985,6 @@ body {
     box-shadow: var(--shadow-xl);
 }
 
-/* New Advanced Features Styles */
-
-/* Typewriter Animation */
-.typewriter {
-    border-left: 2px solid var(--accent);
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0%, 50% { border-left-color: var(--accent); }
-    51%, 100% { border-left-color: transparent; }
-}
-
-/* Hero Stats Counter - Removed */
-
-/* Portfolio Filters */
-.portfolio-filters {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
-}
-
-.filter-btn {
-    padding: 0.75rem 2rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: 2px solid transparent;
-    color: white;
-    border-radius: 50px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    font-weight: 600;
-    font-size: 0.9rem;
-}
-
-.filter-btn:hover,
-.filter-btn.active {
-    background: var(--gradient-primary);
-    border-color: var(--accent);
-    transform: translateY(-2px);
-    box-shadow: 0 10px 25px rgba(255, 111, 97, 0.3);
-}
-
-
-
-/* Scroll Animations */
-.scroll-reveal {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease;
-}
-
-.scroll-reveal.revealed {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Enhanced Mobile Responsiveness */
-@media (max-width: 768px) {
-    .portfolio-filters {
-        gap: 0.5rem;
-    }
-    
-    .filter-btn {
-        padding: 0.5rem 1rem;
-        font-size: 0.8rem;
-    }
-    
-
-}
-
-/* Additional Premium Effects */
-
-
-
-/* Enhanced Button Hover Effects */
-.btn-primary-premium:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 15px 40px rgba(255, 111, 97, 0.4);
-}
-
-.btn-secondary-premium:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 15px 40px rgba(255, 255, 255, 0.2);
-}
-
-/* Portfolio Item Enhanced Hover */
-.portfolio-item-premium:hover .portfolio-overlay {
-    opacity: 1;
-    backdrop-filter: blur(10px);
-}
-
-.portfolio-item-premium:hover .youtube-embed {
-    transform: scale(1.05);
-}
-
-/* Service Card Glow Effect */
-.service-card-premium::before {
-    content: '';
-    position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
-    background: linear-gradient(45deg, transparent, rgba(255, 111, 97, 0.3), transparent);
-    border-radius: inherit;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: -1;
-}
-
-.service-card-premium:hover::before {
-    opacity: 1;
-}
-
-/* Package Popular Badge Enhanced */
-.popular-badge {
-    animation: pulse 2s infinite;
-}
-
-@keyframes pulse {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-}
-
-/* Touch Active States for Mobile */
-.mobile-enhanced .touch-active {
-    transform: scale(0.98);
-    background: rgba(255, 111, 97, 0.1);
-}
-
-/* Loading States */
-.loading-state {
-    position: relative;
-    overflow: hidden;
-}
-
-.loading-state::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-    animation: shimmer 1.5s infinite;
-}
-
-@keyframes shimmer {
-    0% { left: -100%; }
-    100% { left: 100%; }
-}
-
-/* Micro Interactions */
-.nav-link:hover {
-    color: var(--accent);
-    transform: translateY(-2px);
-}
-
-.package-btn-ultra:active {
-    transform: scale(0.98);
-}
-
-.filter-btn:active {
-    transform: scale(0.95);
-}
-
-/* Enhanced Accessibility */
-@media (prefers-reduced-motion: reduce) {
-    * {
-        animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.01ms !important;
-    }
-}
-
-/* High Contrast Mode */
-.high-contrast-mode {
-    filter: contrast(150%) brightness(120%);
-}
-
-.high-contrast-mode .gradient-text {
-    background: black !important;
-    -webkit-background-clip: text !important;
-    color: black !important;
-}
-
-/* Focus Styles for Accessibility */
-*:focus {
-    outline: 3px solid var(--accent);
-    outline-offset: 2px;
-}
-
-.skip-link {
-    position: absolute;
-    top: -40px;
-    left: 6px;
-    background: var(--accent);
-    color: white;
-    padding: 8px;
-    text-decoration: none;
-    border-radius: 4px;
-    transition: top 0.3s;
-}
-
-.skip-link:focus {
-    top: 6px;
-}
-
 /* Animations */
 @keyframes fadeInUp {
     from {
@@ -2284,10 +2058,6 @@ body {
 }
 
 @media (max-width: 1024px) {
-    .hero-premium {
-        padding-top: 70px; /* Add padding to account for fixed header on tablets */
-    }
-    
     .hero-content-premium {
         min-height: 70vh;
     }
@@ -2348,10 +2118,6 @@ body {
         display: none;
     }
     
-    .hero-premium {
-        padding-top: 80px; /* Add padding to account for fixed header */
-    }
-    
     .hero-text-section-full {
         max-width: 90%;
         padding: 2rem 1.5rem;
@@ -2391,7 +2157,7 @@ body {
     }
     
     .portfolio-image {
-        height: 250px;
+        height: 350px;
     }
     
     .portfolio-nav {
@@ -2455,17 +2221,5 @@ body {
 
     .stars i {
         font-size: 1.5rem;
-    }
-}
-
-/* Extra small mobile devices */
-@media (max-width: 480px) {
-    .hero-premium {
-        padding-top: 90px; /* Extra padding for very small screens */
-    }
-    
-    .hero-text-section-full {
-        padding: 1.5rem 1rem;
-        margin-top: 1rem;
     }
 } 

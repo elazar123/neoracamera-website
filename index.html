@@ -13,7 +13,7 @@
     <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="נהורא - ימי צילום מקצועיים לעסקים">
     <meta property="og:description" content="יום צילום אחד שיביא לכם תוכן איכותי לכל השנה. חבילות מותאמות אישית החל מ-₪1,500. צילום מקצועי + עריכה + אסטרטגיה שיווקית.">
-    <meta property="og:image" content="io-photo.png">
+    <meta property="og:image" content="https://neoracamera.vercel.app/io-photo.jpg">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:url" content="https://neoracamera.vercel.app">
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="נהורא - ימי צילום מקצועיים לעסקים">
     <meta name="twitter:description" content="יום צילום אחד שיביא לכם תוכן איכותי לכל השנה. חבילות מותאמות אישית החל מ-₪1,500.">
-    <meta name="twitter:image" content="io-photo.png">
+    <meta name="twitter:image" content="https://neoracamera.vercel.app/io-photo.jpg">
     <meta name="twitter:creator" content="@elazar_riger">
     
     <!-- Additional Meta Tags -->
@@ -35,9 +35,9 @@
     <link rel="canonical" href="https://neoracamera.vercel.app">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" sizes="32x32" href="whatsapp-preview.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="whatsapp-preview.png">
-    <link rel="apple-touch-icon" href="whatsapp-preview.png">
+    <link rel="icon" type="image/jpeg" sizes="32x32" href="io-photo.jpg">
+    <link rel="icon" type="image/jpeg" sizes="16x16" href="io-photo.jpg">
+    <link rel="apple-touch-icon" href="io-photo.jpg">
     
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -62,7 +62,7 @@
         <div class="container">
             <div class="header-content">
                 <div class="logo-section">
-                    <img src="whatsapp-preview.png" alt="לוגו" class="header-logo">
+                    <img src="io-photo.jpg" alt="לוגו" class="header-logo">
                 </div>
                 <nav class="main-nav">
                     <a href="#home" class="nav-link">בית</a>
@@ -84,13 +84,12 @@
         <div class="container">
             <div class="hero-content-premium">
                 <div class="hero-text-section-full">
-                    <h2 class="hero-subtitle-premium">יום צילום שיווקי</h2>
                     <h1 class="hero-title-premium">
-                        צילום 
-                        <span class="gradient-text typewriter" id="dynamicText">שבונה מותג</span>
-                        לעסק שלך
+                        יום צילום שיווקי
+                        <span class="gradient-text">שמשדרג</span>
+                        את העסק שלך
                     </h1>
-                    <h3 class="hero-description-subtitle">ביום אחד אתה נראה כמו מותג גלובלי</h3>
+                    <h2 class="hero-subtitle-premium">ביום אחד אתה נראה כמו מותג גלובלי</h2>
                     <p class="hero-description">אנחנו מצלמים עורכים ומגישים לך חבילות סרטונים מדוייקים לרשתות - בלי כאבי ראש ובלי בלאגן הכל מוכן לפרסום מיידי</p>
                     
                     <div class="hero-buttons">
@@ -339,6 +338,10 @@
                             <i class="fas fa-edit"></i>
                         </div>
                         <h3>בשבילך</h3>
+                        <div class="package-price">
+                            <span class="currency">₪</span>
+                            <span class="amount">1,500</span>
+                        </div>
                         <p class="package-subtitle">שולחים תוכן – מקבלים סרטונים ערוכים</p>
                     </div>
                     <div class="package-features-ultra">
@@ -384,6 +387,10 @@
                             <i class="fas fa-video"></i>
                         </div>
                         <h3>יום צילום מקצועי</h3>
+                        <div class="package-price">
+                            <span class="currency">₪</span>
+                            <span class="amount">3,000</span>
+                        </div>
                         <p class="package-subtitle">אתה מגיע – יוצאים עם תוכן</p>
                     </div>
                     <div class="package-features-ultra">
@@ -434,6 +441,10 @@
                             <i class="fas fa-globe"></i>
                         </div>
                         <h3>4×4 – נוכחות שלמה ברשת</h3>
+                        <div class="package-price">
+                            <span class="currency">₪</span>
+                            <span class="amount">5,000</span>
+                        </div>
                         <p class="package-subtitle">קמפיין תוכן חודשי בעוצמה</p>
                     </div>
                     <div class="package-features-ultra">
@@ -483,6 +494,10 @@
                             <i class="fas fa-crown"></i>
                         </div>
                         <h3>סטודיו – כל התמונה העסקית</h3>
+                        <div class="package-price">
+                            <span class="currency">₪</span>
+                            <span class="amount">10,000</span>
+                        </div>
                         <p class="package-subtitle">הפקה כוללת – תוכן, וידאו, הפצה</p>
                     </div>
                     <div class="package-features-ultra">
@@ -692,10 +707,10 @@
                             <label>סוג חבילה</label>
                             <select name="package" required>
                                 <option value="">בחר חבילה</option>
-                                <option value="בשבילך">בשבילך</option>
-                                <option value="יום צילום מקצועי">יום צילום מקצועי</option>
-                                <option value="4×4 נוכחות שלמה ברשת">4×4 נוכחות שלמה ברשת</option>
-                                <option value="סטודיו כל התמונה העסקית">סטודיו כל התמונה העסקית</option>
+                                <option value="בשבילך">בשבילך - ₪1,500</option>
+                                <option value="יום צילום מקצועי">יום צילום מקצועי - ₪3,000</option>
+                                <option value="4×4 נוכחות שלמה ברשת">4×4 נוכחות שלמה ברשת - ₪5,000</option>
+                                <option value="סטודיו כל התמונה העסקית">סטודיו כל התמונה העסקית - ₪10,000</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -757,8 +772,6 @@
     <button id="accessibilityBtn" class="accessibility-btn-premium" aria-label="נגישות">
         <i class="fas fa-universal-access"></i>
     </button>
-
-
 
     <!-- WhatsApp Float -->
     <a href="https://wa.me/972505052951?text=הי%20אלעזר%20אשמח%20לדבר%20איתך%20לגבי%20יום%20צילום%20לעסק%20שלי" class="whatsapp-float" target="_blank">
