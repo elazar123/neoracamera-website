@@ -283,6 +283,19 @@ body {
     z-index: 0;
 }
 
+#hero-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+}
+
 .video-overlay {
     position: absolute;
     top: 0;
@@ -1237,6 +1250,23 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.package-title-large {
+    font-size: 2.2rem !important;
+    font-weight: 800 !important;
+    margin-bottom: 0.8rem !important;
+    color: var(--text) !important;
+    line-height: 1.2 !important;
+    min-height: auto !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    background: linear-gradient(135deg, var(--text) 0%, var(--accent) 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    background-clip: text !important;
 }
 
 .package-price {
