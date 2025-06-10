@@ -1,16 +1,9 @@
 {
   "version": 2,
-  "name": "neoracamera-website",
   "builds": [
     {
       "src": "index.html",
       "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/$1"
     }
   ],
   "headers": [
