@@ -198,7 +198,7 @@
                 <div class="portfolio-grid-premium" id="portfolioGrid">
                     <div class="portfolio-item-premium" data-category="business">
                         <div class="portfolio-image">
-                            <div class="video-thumbnail" data-youtube-url="https://www.youtube.com/watch?v=0mJoivzwTzQ" onclick="window.open('https://www.youtube.com/watch?v=0mJoivzwTzQ', '_blank')">
+                            <div class="video-thumbnail" data-youtube-url="https://www.youtube.com/watch?v=0mJoivzwTzQ">
                                 <img src="https://img.youtube.com/vi/0mJoivzwTzQ/maxresdefault.jpg" alt="סרטון תדמית עסקי" loading="lazy">
                                 <div class="play-button">
                                     <i class="fas fa-play"></i>
@@ -219,7 +219,7 @@
 
                     <div class="portfolio-item-premium" data-category="business">
                         <div class="portfolio-image">
-                            <div class="video-thumbnail" data-youtube-url="https://www.youtube.com/watch?v=YAlpyB7PwWk" onclick="window.open('https://www.youtube.com/watch?v=YAlpyB7PwWk', '_blank')">
+                            <div class="video-thumbnail" data-youtube-url="https://www.youtube.com/watch?v=YAlpyB7PwWk">
                                 <img src="https://img.youtube.com/vi/YAlpyB7PwWk/maxresdefault.jpg" alt="קמפיין שיווקי דיגיטלי" loading="lazy">
                                 <div class="play-button">
                                     <i class="fas fa-play"></i>
@@ -240,7 +240,7 @@
 
                     <div class="portfolio-item-premium" data-category="personal">
                         <div class="portfolio-image">
-                            <div class="video-thumbnail" data-youtube-url="https://www.youtube.com/watch?v=r7b00dM7fCc" onclick="window.open('https://www.youtube.com/watch?v=r7b00dM7fCc', '_blank')">
+                            <div class="video-thumbnail" data-youtube-url="https://www.youtube.com/watch?v=r7b00dM7fCc">
                                 <img src="https://img.youtube.com/vi/r7b00dM7fCc/maxresdefault.jpg" alt="תוכן אישי וייחודי" loading="lazy">
                                 <div class="play-button">
                                     <i class="fas fa-play"></i>
@@ -261,7 +261,7 @@
 
                     <div class="portfolio-item-premium" data-category="creative">
                         <div class="portfolio-image">
-                            <div class="video-thumbnail" data-youtube-url="https://www.youtube.com/watch?v=XAff3kV13VA" onclick="window.open('https://www.youtube.com/watch?v=XAff3kV13VA', '_blank')">
+                            <div class="video-thumbnail" data-youtube-url="https://www.youtube.com/watch?v=XAff3kV13VA">
                                 <img src="https://img.youtube.com/vi/XAff3kV13VA/maxresdefault.jpg" alt="פרויקט יצירתי מיוחד" loading="lazy">
                                 <div class="play-button">
                                     <i class="fas fa-play"></i>
@@ -282,7 +282,7 @@
 
                     <div class="portfolio-item-premium" data-category="business">
                         <div class="portfolio-image">
-                            <div class="video-thumbnail" data-youtube-url="https://www.youtube.com/watch?v=TEpWZwqTNtw" onclick="window.open('https://www.youtube.com/watch?v=TEpWZwqTNtw', '_blank')">
+                            <div class="video-thumbnail" data-youtube-url="https://www.youtube.com/watch?v=TEpWZwqTNtw">
                                 <img src="https://img.youtube.com/vi/TEpWZwqTNtw/maxresdefault.jpg" alt="סדרת רילס מקצועית" loading="lazy">
                                 <div class="play-button">
                                     <i class="fas fa-play"></i>
@@ -303,7 +303,7 @@
 
                     <div class="portfolio-item-premium" data-category="personal">
                         <div class="portfolio-image">
-                            <div class="video-thumbnail" data-youtube-url="https://www.youtube.com/watch?v=q1qrpLm0FyY" onclick="window.open('https://www.youtube.com/watch?v=q1qrpLm0FyY', '_blank')">
+                            <div class="video-thumbnail" data-youtube-url="https://www.youtube.com/watch?v=q1qrpLm0FyY">
                                 <img src="https://img.youtube.com/vi/q1qrpLm0FyY/maxresdefault.jpg" alt="תוכן לקהל מקצועי" loading="lazy">
                                 <div class="play-button">
                                     <i class="fas fa-play"></i>
@@ -763,6 +763,16 @@
         <i class="fas fa-universal-access"></i>
     </button>
 
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="video-modal-content">
+            <button class="video-modal-close">&times;</button>
+            <div class="video-container">
+                <iframe id="videoFrame" width="100%" height="100%" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
     <!-- WhatsApp Float -->
     <a href="https://wa.me/972505052951?text=הי%20אלעזר%20אשמח%20לדבר%20איתך%20לגבי%20יום%20צילום%20לעסק%20שלי" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
@@ -780,86 +790,6 @@
         });
     </script>
     
-    <!-- Video Click Handler Script -->
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        console.log('Video click handler loading...');
-        
-        // Wait a bit for all elements to load
-        setTimeout(function() {
-            const videoThumbnails = document.querySelectorAll('.video-thumbnail');
-            console.log('Found video thumbnails:', videoThumbnails.length);
-            
-            videoThumbnails.forEach((thumbnail, index) => {
-                console.log('Setting up thumbnail', index);
-                
-                // Remove any existing onclick
-                thumbnail.removeAttribute('onclick');
-                
-                // Get the YouTube URL
-                const youtubeUrl = thumbnail.getAttribute('data-youtube-url');
-                console.log('YouTube URL for thumbnail', index, ':', youtubeUrl);
-                
-                if (youtubeUrl) {
-                    // Add click event
-                    thumbnail.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        e.stopPropagation();
-                        
-                        console.log('Clicked on video thumbnail', index, 'URL:', youtubeUrl);
-                        
-                        // Try to open the video
-                        try {
-                            const newWindow = window.open(youtubeUrl, '_blank', 'noopener,noreferrer,width=1280,height=720');
-                            
-                            if (!newWindow) {
-                                console.log('Window.open failed, trying alternative method');
-                                // Create and click a temporary link
-                                const link = document.createElement('a');
-                                link.href = youtubeUrl;
-                                link.target = '_blank';
-                                link.rel = 'noopener noreferrer';
-                                
-                                // Add to DOM temporarily
-                                document.body.appendChild(link);
-                                link.click();
-                                document.body.removeChild(link);
-                            } else {
-                                console.log('Window opened successfully');
-                            }
-                        } catch (error) {
-                            console.error('Error opening video:', error);
-                            // Last resort - show the URL
-                            alert('נא לפתוח את הקישור: ' + youtubeUrl);
-                        }
-                        
-                        // Visual feedback
-                        this.style.transform = 'scale(0.95)';
-                        setTimeout(() => {
-                            this.style.transform = 'scale(1)';
-                        }, 200);
-                    });
-                    
-                    // Add hover effect
-                    thumbnail.addEventListener('mouseenter', function() {
-                        const playBtn = this.querySelector('.play-button');
-                        if (playBtn) {
-                            playBtn.style.transform = 'translate(-50%, -50%) scale(1.15)';
-                        }
-                    });
-                    
-                    thumbnail.addEventListener('mouseleave', function() {
-                        const playBtn = this.querySelector('.play-button');
-                        if (playBtn) {
-                            playBtn.style.transform = 'translate(-50%, -50%) scale(1)';
-                        }
-                    });
-                }
-            });
-            
-            console.log('Video thumbnails setup complete');
-        }, 1000);
-    });
-    </script>
+
 </body>
 </html> 

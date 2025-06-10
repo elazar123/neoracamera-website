@@ -683,12 +683,46 @@ document.addEventListener('DOMContentLoaded', function() {
     
     document.head.appendChild(style);
     
-    // Enhanced video thumbnail functionality
+    // Video modal functionality - plays videos within the site
     function initVideoThumbnails() {
+        const videoModal = document.getElementById('videoModal');
+        const videoFrame = document.getElementById('videoFrame');
+        const modalClose = document.querySelector('.video-modal-close');
+        
+        if (!videoModal || !videoFrame || !modalClose) {
+            console.log('Video modal elements not found, skipping video initialization');
+            return;
+        }
+        
+        // Function to convert YouTube URL to embed URL
+        function getYouTubeEmbedUrl(url) {
+            const regex = /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&\n?#]+)/;
+            const match = url.match(regex);
+            if (match) {
+                return `https://www.youtube.com/embed/${match[1]}?autoplay=1&rel=0&modestbranding=1`;
+            }
+            return url;
+        }
+        
+        // Function to open video modal
+        function openVideoModal(youtubeUrl) {
+            const embedUrl = getYouTubeEmbedUrl(youtubeUrl);
+            videoFrame.src = embedUrl;
+            videoModal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+        
+        // Function to close video modal
+        function closeVideoModal() {
+            videoModal.classList.remove('active');
+            videoFrame.src = '';
+            document.body.style.overflow = '';
+        }
+        
         const videoThumbnails = document.querySelectorAll('.video-thumbnail');
         
         videoThumbnails.forEach(thumbnail => {
-            // Remove any existing onclick and add enhanced click handler
+            // Remove any existing onclick
             thumbnail.removeAttribute('onclick');
             
             thumbnail.addEventListener('click', function(e) {
@@ -697,53 +731,12 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 console.log('Video thumbnail clicked');
                 
-                // Get YouTube URL from onclick or data attribute
-                const onclickAttr = this.getAttribute('onclick');
-                let youtubeUrl = '';
+                // Get YouTube URL from data attribute
+                const youtubeUrl = this.getAttribute('data-youtube-url');
                 
-                if (onclickAttr) {
-                    const match = onclickAttr.match(/window\.open\('([^']+)'/);
-                    if (match) {
-                        youtubeUrl = match[1];
-                    }
-                }
-                
-                // Alternative: Check if URL is in a data attribute
-                if (!youtubeUrl) {
-                    youtubeUrl = this.getAttribute('data-youtube-url');
-                }
-                
-                // Extract video ID and try alternative approaches
                 if (youtubeUrl) {
-                    console.log('Opening YouTube URL:', youtubeUrl);
-                    
-                    // Try multiple methods to open the video
-                    try {
-                        // Method 1: Direct window.open
-                        const newWindow = window.open(youtubeUrl, '_blank', 'noopener,noreferrer');
-                        
-                        // Method 2: If popup blocked, try location assignment
-                        if (!newWindow || newWindow.closed || typeof newWindow.closed === 'undefined') {
-                            console.log('Popup blocked, trying alternative method');
-                            
-                            // Create temporary anchor element
-                            const tempLink = document.createElement('a');
-                            tempLink.href = youtubeUrl;
-                            tempLink.target = '_blank';
-                            tempLink.rel = 'noopener noreferrer';
-                            
-                            // Simulate click on anchor
-                            document.body.appendChild(tempLink);
-                            tempLink.click();
-                            document.body.removeChild(tempLink);
-                        }
-                        
-                    } catch (error) {
-                        console.error('Error opening YouTube video:', error);
-                        
-                        // Fallback: Show alert with URL
-                        alert(`נא לפתוח את הסרטון בכתובת: ${youtubeUrl}`);
-                    }
+                    console.log('Opening video modal for:', youtubeUrl);
+                    openVideoModal(youtubeUrl);
                 }
                 
                 // Add visual feedback
@@ -771,7 +764,24 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         });
         
-        console.log('Video thumbnails initialized:', videoThumbnails.length);
+        // Close modal events
+        modalClose.addEventListener('click', closeVideoModal);
+        
+        // Close modal when clicking outside
+        videoModal.addEventListener('click', function(e) {
+            if (e.target === videoModal) {
+                closeVideoModal();
+            }
+        });
+        
+        // Close modal with ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && videoModal.classList.contains('active')) {
+                closeVideoModal();
+            }
+        });
+        
+        console.log('Video modal initialized for', videoThumbnails.length, 'thumbnails');
     }
 });
 
